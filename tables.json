@@ -1,0 +1,40 @@
+expensives
+tags
+
+{
+	"id":1,
+	"expense_id": "edesur_lanus",
+	"tag": "tax",
+	"date": "29-01-2016",
+	"mount": "100",
+	"type": "mandatory"
+}
+
+types:
+mandatory
+extra
+
+expense_id:
+edesur_lanus
+edenor_santafe
+
+tags:
+tax
+food
+other
+
+
+account
+
+{
+	"id": 1,
+	"name": "juan perez",
+	"salary": "1000"
+}
+
+CRATE DATABASE TABLERO;
+
+CREATE TABLE expensive (id VARCHAR(50), description VARCHAR(120), PRIMARY KEY(id));
+CREATE TABLE tag (id VARCHAR(50), description VARCHAR(120), PRIMARY KEY(id));
+CREATE TABLE user (id INT(10) NOT NULL AUTO_INCREMENT, name VARCHAR(120), salary INT(10), PRIMARY KEY(id));
+CREATE TABLE logs(id INT(10) NOT NULL AUTO_INCREMENT, expensive_id VARCHAR(50), tag_id VARCHAR(50), date DATETIME, PRIMARY KEY(id));
